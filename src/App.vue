@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    dnd
+    <div class="box" id="dragstart">
+      <p draggable="true">drag</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  mounted () {
+    document.getElementById('dragstart').addEventListener('drag', function () {
+      console.log('drag');
+    });
+  }
 }
 </script>
 
@@ -18,5 +25,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.box {
+  height: 10vh;
+  width: 10vw;
+  margin: 0 auto;
+  background-color: aquamarine;
 }
 </style>
