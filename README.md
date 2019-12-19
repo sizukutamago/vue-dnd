@@ -1,5 +1,8 @@
 # vue-dnd
 
+## demo
+https://tender-austin-231fbf.netlify.com/
+
 ## Project setup
 ```
 yarn install
