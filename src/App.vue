@@ -12,24 +12,20 @@ export default {
   name: 'app',
   mounted () {
      document.getElementById('drag').addEventListener('dragstart', event => {
-       event.dataTransfer.setData('text/plain', event.target.textContent);
+       event.dataTransfer.setData('text/plain', event.target.innerText);
      });
 
-     const dropElement = document.getElementById('drop');
-
-     dropElement.addEventListener('dragenter', event => {
-       event.preventDefault();
-     });
-
-    dropElement.addEventListener('dragover',event => {
-      event.dataTransfer.dropEffect = 'copy';
+    document.getElementById('drop').addEventListener('dragover',event => {
       event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
     });
   },
   methods: {
     dropElement(event) {
       event.preventDefault();
-      event.target.innerHTML = event.dataTransfer.getData('text/plain');
+      let element = document.createElement('p');
+      element.innerText = event.dataTransfer.getData('text/plain');
+      event.target.appendChild(element);
     }
   }
 }
