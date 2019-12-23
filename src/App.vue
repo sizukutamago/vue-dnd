@@ -3,9 +3,7 @@
     <div class="box1" id="drag">
       <p draggable="true">drag</p>
     </div>
-    <div class="box2" id="drop" @drop="dropElement">
-      <p></p>
-    </div>
+    <div class="box2" id="drop" @drop="dropElement"></div>
   </div>
 </template>
 
@@ -44,17 +42,27 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
 }
 
 p {
-  margin: auto;
+  margin: 5px auto;
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
-  height: 10vh;
-  width: 10vw;
+  height: 80vh;
   margin: 0 auto;
+  width: 20vw;
+  border-radius: 5px;
 }
 
 .box1 {
