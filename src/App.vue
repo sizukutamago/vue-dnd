@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,17 +51,19 @@ p {
   margin: auto;
 }
 
-.box1 {
+.box {
   height: 10vh;
   width: 10vw;
   margin: 0 auto;
+}
+
+.box1 {
+  @extend .box;
   background-color: aquamarine;
 }
 
 .box2 {
-  height: 10vh;
-  width: 10vw;
-  margin: 0 auto;
+  @extend .box;
   background-color: gold;
 }
 </style>
