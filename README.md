@@ -28,6 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # memo
 ## dnd
+https://developer.mozilla.org/ja/docs/Web/API/HTML_Drag_and_Drop_API
 https://developer.mozilla.org/ja/docs/DragDrop/Drag_Operations
 https://uhyohyo.net/javascript/12_6.html
 
